@@ -1,9 +1,9 @@
 {
-    "todo" : [
+    "todos" : [
         {
             "id" : 1,
             "title" : "My first todo",
-            "completed" : false
+            "completed" : true
         },
         {
             "id" : 2,

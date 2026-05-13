@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function CheckAllRemaining() {
+export default function CheckAllAndRemaining() {
   return (
     <div className="check-all-container">
           <div>
