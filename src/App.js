@@ -11,6 +11,7 @@ function App() {
 
   let [todos, setTodos] = useState([]);
 
+  
   useEffect(()=>{
     fetch('http://localhost:3001/todos')
     .then(res=>res.json())
@@ -29,6 +30,20 @@ function App() {
     })
     setTodos(preState=>[...preState,todo])
   }
+
+  let deleteTodo = (todoId)=>{
+    //server
+    fetch(`http://localhost:3001/todos/${todoId}`,{
+      method : "DELETE"
+    })
+
+    //client
+    setTodos(prevState=>{
+      return prevState.filter(todo=>{
+        return todo.id !== todoId
+      })
+    })
+  }
   return (
     <div className="todo-app-container">
       <div className="todo-app">
@@ -38,7 +53,7 @@ function App() {
         <TodoForm addTodo={addTodo}/>
 
         {/* TodoList */}
-        <TodoList todos={todos}/>
+        <TodoList todos={todos} deleteTodo={deleteTodo}/>
 
         {/* CheckAllRemaining */}
         <CheckAllRemaining/>

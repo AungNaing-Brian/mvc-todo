@@ -1,20 +1,4 @@
 {
-  "todos": [
-    {
-      "id": "1",
-      "title": "My first todo",
-      "completed": true
-    },
-    {
-      "id": "2",
-      "title": "My second todo",
-      "completed": false
-    },
-    {
-      "id": "yD3QTXzEsb4",
-      "title": "added 1 test",
-      "completed": false
-    }
-  ],
+  "todos": [],
   "$schema": "./node_modules/json-server/schema.json"
 }
